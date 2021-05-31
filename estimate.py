@@ -1,13 +1,15 @@
-import random
 import math
+import random
 
 def wallis(n):
- sum=0
+ product=1
  for i in range(1,n+1):
-  k=4*math.pow(i,2)
-  sum=sum+(k/(k-1))
- pi=2*sum
+  k=float(4*math.pow(i,2))
+  product*=(k/(k-1))
+ pi=2*product
  return pi
+ 
+ 
 
 def monte_carlo(n):
  count=0
@@ -21,13 +23,8 @@ def monte_carlo(n):
 
  pi=4*(count/n)
  return pi
+ 
 
 
-  
 
-n=int(input("enter the number of times"))
-wallis(n)
-monte_carlo(n)
 
-  
-   
